@@ -23,9 +23,15 @@ app.use('/api/auth', require('./routes/auth') );
 app.use('/api/events', require('./routes/events') );
 
 
-app.listen(PORT, '0.0.0.0', () => {
-	console.log(`El servidor esta funcionando en el puerto ${PORT}`);
+
+
+// Escuchar peticiones
+app.listen( process.env.PORT, '0.0.0.0', () => {
+    console.log(`Servidor corriendo en puerto ${ process.env.PORT }`);
 });
+
+
+
 
 
 
